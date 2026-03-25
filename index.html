@@ -19,9 +19,7 @@
   --shadow: rgba(0, 0, 0, 0.045);
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -37,7 +35,6 @@ body {
   background: var(--paper);
   padding: 56px;
   box-shadow: 0 0 28px var(--shadow);
-  position: relative;
 }
 
 /* Navigation */
@@ -55,50 +52,14 @@ nav a {
   font-size: 13px;
   letter-spacing: 1.7px;
   text-transform: uppercase;
-  position: relative;
-  padding-bottom: 6px;
 
-  background: linear-gradient(
-    90deg,
-    #7c3aed,
-    #2563eb,
-    #0ea5e9,
-    #10b981,
-    #f59e0b
-  );
-
+  background: linear-gradient(90deg,#7c3aed,#2563eb,#0ea5e9,#10b981,#f59e0b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 0;
-  height: 1px;
-  background: var(--gold);
-  transform: translateX(-50%);
-  transition: width 0.22s ease;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-/* Logo */
-
-.logo {
-  text-align: center;
-  margin-bottom: 12px;
 }
 
 .logo img {
   max-width: 235px;
-  width: 100%;
-  height: auto;
   display: block;
   margin: 0 auto;
 }
@@ -110,57 +71,24 @@ nav a:hover::after {
   font-weight: 500;
   font-size: 2.4rem;
   letter-spacing: 3px;
-  margin: 0 0 8px 0;
 
-  background: linear-gradient(
-    90deg,
-    #7c3aed,
-    #2563eb,
-    #0ea5e9,
-    #10b981,
-    #f59e0b,
-    #ef4444
-  );
-
+  background: linear-gradient(90deg,#7c3aed,#2563eb,#0ea5e9,#10b981,#f59e0b,#ef4444);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.header-subtitle {
-  text-align: center;
-  color: #5f5a53;
-  font-size: 12px;
-  letter-spacing: 2.2px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
+.header-subtitle,
 .header-subtitle-2 {
   text-align: center;
-  color: #8a8277;
-  font-size: 11px;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
 }
 
 .title-divider {
   width: 76px;
   height: 1px;
   background: linear-gradient(to right, transparent, var(--gold), transparent);
-  margin: 26px auto 46px auto;
-}
-
-h2 {
-  margin-top: 62px;
-  margin-bottom: 12px;
-  font-weight: normal;
-  letter-spacing: 1.2px;
-  color: #2d2d2d;
-}
-
-.section-intro {
-  max-width: 850px;
-  color: #3e3a35;
+  margin: 26px auto 46px;
 }
 
 /* ABOUT */
@@ -169,13 +97,10 @@ h2 {
   display: flex;
   align-items: center;
   gap: 50px;
-  margin-top: 20px;
 }
 
 .about-image img {
   width: 280px;
-  height: auto;
-  display: block;
   filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
 }
 
@@ -189,30 +114,41 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
   gap: 22px;
-  margin-top: 28px;
-}
-
-.gem-link {
-  text-decoration: none;
-  color: inherit;
 }
 
 .gem {
-  padding: 20px 16px;
+  padding: 20px;
   text-align: center;
-  letter-spacing: 0.6px;
-  font-size: 15px;
-  background: linear-gradient(145deg, #ffffff, #f1efeb);
+  background: #f1efeb;
   border: 1px solid #ddd7ce;
+}
+
+/* Credentials */
+
+.credentials-section {
+  margin-top: 60px;
+  border-top: 1px solid var(--line);
+  padding-top: 30px;
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.badge-grid img {
+  width: 100%;
 }
 
 /* Responsive */
 
 @media (max-width: 900px) {
-  .container { padding: 36px 22px; }
-  .about-layout { flex-direction: column; text-align:center; }
+  .about-layout {
+    flex-direction: column;
+    text-align: center;
+  }
 }
-
 </style>
 </head>
 
@@ -223,7 +159,6 @@ h2 {
 <nav>
 <a href="#about">About</a>
 <a href="#collection">Collection</a>
-<a href="#gallery">Gallery</a>
 <a href="#credentials">Credentials</a>
 </nav>
 
@@ -252,11 +187,10 @@ Inspired by the Crown Jewels & British Royal Collections
 </div>
 
 <div class="about-text">
-<p class="section-intro">
+<p>
 This independent gemological archive documents a private gemstone collection
 assembled for study, reference, and appreciation. The collection is inspired by
-historic royal jewel collections and museum-held specimens, with an emphasis on
-gemological education, classification, and long-term documentation.
+historic royal jewel collections and museum-held specimens.
 </p>
 </div>
 
@@ -266,24 +200,54 @@ gemological education, classification, and long-term documentation.
 
 <div class="collection-grid">
 
-<a class="gem-link" href="amethyst.html"><div class="gem">Amethyst</div></a>
-<a class="gem-link" href="ametrine.html"><div class="gem">Ametrine</div></a>
-<a class="gem-link" href="aquamarine.html"><div class="gem">Aquamarine</div></a>
-<a class="gem-link" href="citrine.html"><div class="gem">Citrine</div></a>
-<a class="gem-link" href="garnet.html"><div class="gem">Garnet</div></a>
-<a class="gem-link" href="kunzite.html"><div class="gem">Kunzite</div></a>
-<a class="gem-link" href="opal.html"><div class="gem">Opal</div></a>
-<a class="gem-link" href="prasiolite.html"><div class="gem">Prasiolite</div></a>
-<a class="gem-link" href="quartz.html"><div class="gem">Quartz</div></a>
-<a class="gem-link" href="sapphire.html"><div class="gem">Sapphire</div></a>
-<a class="gem-link" href="spinel.html"><div class="gem">Spinel</div></a>
-<a class="gem-link" href="topaz.html"><div class="gem">Topaz</div></a>
-<a class="gem-link" href="tourmaline.html"><div class="gem">Tourmaline</div></a>
-<a class="gem-link" href="zircon.html"><div class="gem">Zircon</div></a>
+<div class="gem">Amethyst</div>
+<div class="gem">Ametrine</div>
+<div class="gem">Aquamarine</div>
+<div class="gem">Citrine</div>
+<div class="gem">Garnet</div>
+<div class="gem">Kunzite</div>
+<div class="gem">Opal</div>
+<div class="gem">Prasiolite</div>
+<div class="gem">Quartz</div>
+<div class="gem">Sapphire</div>
+<div class="gem">Spinel</div>
+<div class="gem">Topaz</div>
+<div class="gem">Tourmaline</div>
+<div class="gem">Zircon</div>
 
 </div>
 
+<div class="credentials-section" id="credentials">
+
+<h2>Credentials</h2>
+
+<p class="section-intro">
+International Gem Society coursework and certifications.
+Professional Gemologist designation in progress.
+</p>
+
+<div class="badge-grid">
+<img src="https://www.gemsociety.org/badge/28682/1/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/968874/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/968361/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/875625/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/680044/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/635770/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/603658/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/570026/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/549880/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/525304/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/511667/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/507153/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/504399/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/504417/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/504384/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/502495/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/501364/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/501365/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/501218/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/501071/" alt="IGS badge">
+<img src="https://www.gemsociety.org/badge/28682/500216/" alt="IGS badge">
 </div>
 
-</body>
-</html>
+</div>
