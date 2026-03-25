@@ -72,8 +72,19 @@ height: auto;
 text-align: center;
 }
 
-ul {
-line-height: 1.8;
+.collection-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+gap: 15px;
+margin-top: 20px;
+}
+
+.gem {
+padding: 12px;
+border: 1px solid #e5e5e5;
+text-align: center;
+background: #fafafa;
+letter-spacing: .5px;
 }
 
 </style>
@@ -133,22 +144,23 @@ Currently working toward Professional Gemologist designation.
 </div>
 
 <h2 id="collection">Collection</h2>
-<ul>
-<li>Amethyst</li>
-<li>Ametrine</li>
-<li>Aquamarine</li>
-<li>Citrine</li>
-<li>Garnet</li>
-<li>Kunzite</li>
-<li>Opal</li>
-<li>Prasiolite</li>
-<li>Quartz</li>
-<li>Sapphire</li>
-<li>Spinel</li>
-<li>Topaz</li>
-<li>Tourmaline</li>
-<li>Zircon</li>
-</ul>
+
+<div class="collection-grid">
+<div class="gem">Amethyst</div>
+<div class="gem">Ametrine</div>
+<div class="gem">Aquamarine</div>
+<div class="gem">Citrine</div>
+<div class="gem">Garnet</div>
+<div class="gem">Kunzite</div>
+<div class="gem">Opal</div>
+<div class="gem">Prasiolite</div>
+<div class="gem">Quartz</div>
+<div class="gem">Sapphire</div>
+<div class="gem">Spinel</div>
+<div class="gem">Topaz</div>
+<div class="gem">Tourmaline</div>
+<div class="gem">Zircon</div>
+</div>
 
 <h2 id="gallery">Gallery</h2>
 <p>Specimen gallery coming soon.</p>
