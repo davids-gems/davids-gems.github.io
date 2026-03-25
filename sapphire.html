@@ -54,12 +54,12 @@ border-top: 1px solid #e5e5e5;
 margin: 50px 0;
 }
 
-.specimen-number {
-font-size: 12px;
+.specimen-id {
+font-size: 11px;
 letter-spacing: 2px;
-color: #888;
+color: #999;
 text-transform: uppercase;
-margin-bottom: 5px;
+margin-bottom: 4px;
 }
 
 .specimen-title {
@@ -96,21 +96,24 @@ border-bottom: 1px solid #eee;
 }
 
 .details-label {
-width: 160px;
+width: 170px;
 color: #777;
 font-size: 12px;
 letter-spacing: 1px;
 text-transform: uppercase;
 }
 
+.section-title {
+margin-top: 30px;
+font-size: 14px;
+letter-spacing: 1px;
+text-transform: uppercase;
+color: #666;
+}
+
 .reference-image img {
 width: 100%;
 border: 1px solid #e5e5e5;
-}
-
-.notes {
-margin-top: 30px;
-line-height: 1.6;
 }
 
 </style>
@@ -129,18 +132,18 @@ line-height: 1.6;
 Corundum • Al₂O₃
 </div>
 
-<div class="specimen-number">
-Collection Specimen 001
+<div class="specimen-id">
+Specimen ID: SAP-001
 </div>
 
 <div class="specimen-title">
-Blue Sapphire (Collection Piece)
+Blue Sapphire
 </div>
 
 <div class="specimen-grid">
 
 <div class="specimen-image">
-Your specimen photo will appear here
+Collection specimen photo
 </div>
 
 <div>
@@ -173,6 +176,11 @@ Your specimen photo will appear here
 </tr>
 
 <tr>
+<td class="details-label">Dimensions</td>
+<td>—</td>
+</tr>
+
+<tr>
 <td class="details-label">Origin</td>
 <td>—</td>
 </tr>
@@ -183,7 +191,7 @@ Your specimen photo will appear here
 </tr>
 
 <tr>
-<td class="details-label">Acquired</td>
+<td class="details-label">Clarity</td>
 <td>—</td>
 </tr>
 
@@ -193,23 +201,41 @@ Your specimen photo will appear here
 
 </div>
 
-<div class="notes">
-<strong>Notes</strong>
+<div class="section-title">Acquisition</div>
+
+<table class="details-table">
+
+<tr>
+<td class="details-label">Date Acquired</td>
+<td>—</td>
+</tr>
+
+<tr>
+<td class="details-label">Source</td>
+<td>—</td>
+</tr>
+
+<tr>
+<td class="details-label">Location</td>
+<td>—</td>
+</tr>
+
+<tr>
+<td class="details-label">Price</td>
+<td>—</td>
+</tr>
+
+</table>
+
+<div class="section-title">Provenance</div>
+
 <p>
-Collection specimen documentation will be completed once imaging equipment
-is available.
+Documentation and ownership history will be recorded if available.
 </p>
-</div>
 
 <div class="section-divider"></div>
 
-<div class="specimen-number">
-Reference Example
-</div>
-
-<div class="specimen-title">
-Reference Sapphire
-</div>
+<div class="section-title">Reference Example</div>
 
 <div class="specimen-grid">
 
@@ -220,9 +246,9 @@ Reference Sapphire
 <div>
 
 <p>
-Reference sapphire shown for comparative color and cutting style.
-This image is used strictly for educational reference and does not
-represent a specimen in the collection.
+Reference sapphire used for color and cutting comparison.
+This image is for educational reference only and is not part
+of the collection.
 </p>
 
 </div>
