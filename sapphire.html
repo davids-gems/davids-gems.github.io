@@ -23,8 +23,8 @@ box-shadow: 0 0 25px rgba(0,0,0,0.04);
 }
 
 a {
-color: inherit;
 text-decoration: none;
+color: inherit;
 }
 
 .top-link {
@@ -32,12 +32,14 @@ font-size: 12px;
 letter-spacing: 1px;
 color: #777;
 text-transform: uppercase;
+margin-bottom: 20px;
+display: block;
 }
 
 h1 {
 font-weight: normal;
 letter-spacing: 2px;
-margin-bottom: 10px;
+margin-bottom: 5px;
 }
 
 .subtitle {
@@ -47,39 +49,63 @@ letter-spacing: 1px;
 margin-bottom: 40px;
 }
 
-.specimen-box {
-border: 1px solid #e5e5e5;
-padding: 30px;
-margin-top: 30px;
+.specimen {
+border-top: 1px solid #e5e5e5;
+padding-top: 40px;
+margin-top: 40px;
+}
+
+.specimen-number {
+font-size: 12px;
+letter-spacing: 2px;
+color: #888;
+text-transform: uppercase;
+margin-bottom: 5px;
 }
 
 .specimen-title {
-font-size: 18px;
+font-size: 20px;
 letter-spacing: 1px;
-margin-bottom: 20px;
+margin-bottom: 25px;
+}
+
+.specimen-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+}
+
+.specimen-image {
+border: 1px solid #e5e5e5;
+height: 260px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #aaa;
+font-size: 13px;
+letter-spacing: 1px;
 }
 
 .details-table {
 width: 100%;
 border-collapse: collapse;
-margin-top: 20px;
 }
 
 .details-table td {
-padding: 10px 0;
+padding: 8px 0;
 border-bottom: 1px solid #eee;
 }
 
 .details-label {
-width: 200px;
+width: 160px;
 color: #777;
-letter-spacing: 1px;
 font-size: 12px;
+letter-spacing: 1px;
 text-transform: uppercase;
 }
 
 .notes {
-margin-top: 40px;
+margin-top: 30px;
 line-height: 1.6;
 }
 
@@ -90,20 +116,35 @@ line-height: 1.6;
 
 <div class="container">
 
-<div class="top-link">
-<a href="index.html">← Return to Collection</a>
-</div>
+<a href="index.html" class="top-link">
+← Return to Collection
+</a>
 
 <h1>Sapphire</h1>
-<div class="subtitle">Corundum • Al₂O₃</div>
+<div class="subtitle">
+Corundum • Al₂O₃
+</div>
 
-<div class="specimen-box">
+<div class="specimen">
 
-<div class="specimen-title">
+<div class="specimen-number">
 Specimen 001
 </div>
 
+<div class="specimen-title">
+Blue Sapphire
+</div>
+
+<div class="specimen-grid">
+
+<div class="specimen-image">
+Image Placeholder
+</div>
+
+<div>
+
 <table class="details-table">
+
 <tr>
 <td class="details-label">Species</td>
 <td>Corundum</td>
@@ -146,13 +187,17 @@ Specimen 001
 
 </table>
 
+</div>
+
+</div>
+
 <div class="notes">
 
 <strong>Notes</strong>
 
 <p>
-Specimen documentation and gemological observations will be added
-as cataloging progresses.
+Gemological observations, inclusion characteristics, and acquisition details
+will be documented as cataloging progresses.
 </p>
 
 </div>
