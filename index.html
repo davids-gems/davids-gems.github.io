@@ -19,6 +19,25 @@ padding: 40px;
 box-shadow: 0 0 20px rgba(0,0,0,0.05);
 }
 
+nav {
+text-align: center;
+margin-bottom: 25px;
+border-bottom: 1px solid #e5e5e5;
+padding-bottom: 10px;
+}
+
+nav a {
+margin: 0 15px;
+text-decoration: none;
+color: #444;
+font-size: 15px;
+letter-spacing: .5px;
+}
+
+nav a:hover {
+color: #000;
+}
+
 h1 {
 text-align: center;
 letter-spacing: 1px;
@@ -64,16 +83,23 @@ line-height: 1.8;
 
 <div class="container">
 
+<nav>
+<a href="#about">About</a>
+<a href="#credentials">Credentials</a>
+<a href="#collection">Collection</a>
+<a href="#gallery">Gallery</a>
+</nav>
+
 <h1>David's Gemstone Collection</h1>
 <div class="header-subtitle">Private Collection & Study Archive</div>
 
-<h2>About</h2>
+<h2 id="about">About</h2>
 <p>
 Welcome to my personal gemstone collection. This site documents specimens,
 research, and gemological study notes.
 </p>
 
-<h2>Credentials</h2>
+<h2 id="credentials">Credentials</h2>
 
 <p>
 International Gem Society coursework and certifications.  
@@ -106,7 +132,7 @@ Currently working toward Professional Gemologist designation.
 
 </div>
 
-<h2>Collection</h2>
+<h2 id="collection">Collection</h2>
 <ul>
 <li>Amethyst</li>
 <li>Ametrine</li>
@@ -123,6 +149,9 @@ Currently working toward Professional Gemologist designation.
 <li>Tourmaline</li>
 <li>Zircon</li>
 </ul>
+
+<h2 id="gallery">Gallery</h2>
+<p>Specimen gallery coming soon.</p>
 
 </div>
 
