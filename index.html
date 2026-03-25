@@ -145,15 +145,26 @@ h2 {
 .gem {
   padding: 20px;
   text-align: center;
-  background: #f1efeb;
-  border: 1px solid #ddd7ce;
+  background: linear-gradient(
+    90deg,
+    #7c3aed,
+    #2563eb,
+    #0ea5e9,
+    #10b981,
+    #f59e0b,
+    #ef4444
+  );
+  color: white;
   text-decoration: none;
-  color: inherit;
   display: block;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  transition: 0.2s ease;
 }
 
 .gem:hover {
-  background: #eae6df;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
 /* Credentials */
