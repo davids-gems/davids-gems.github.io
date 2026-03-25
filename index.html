@@ -51,13 +51,26 @@ nav {
 nav a {
   margin: 0 18px;
   text-decoration: none;
-  color: #5e5a54;
   font-size: 13px;
   letter-spacing: 1.7px;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 6px;
-  transition: color 0.2s ease;
+
+  background: linear-gradient(
+    90deg,
+    #7c3aed,
+    #2563eb,
+    #0ea5e9,
+    #10b981,
+    #f59e0b
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  transition: opacity 0.2s ease;
 }
 
 nav a:hover {
