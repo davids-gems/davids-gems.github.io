@@ -6,7 +6,8 @@
 <title>David's Gemstone Collection</title>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
 :root {
   --bg: #f3f2ef;
   --paper: #ffffff;
@@ -69,12 +70,6 @@ nav a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-
-  transition: opacity 0.2s ease;
-}
-
-nav a:hover {
-  color: #1f1f1f;
 }
 
 nav a::after {
@@ -112,7 +107,6 @@ nav a:hover::after {
 
 .site-title {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 2.4rem;
   letter-spacing: 3px;
@@ -130,7 +124,6 @@ nav a:hover::after {
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .header-subtitle {
@@ -148,7 +141,6 @@ nav a:hover::after {
   font-size: 11px;
   letter-spacing: 1.6px;
   text-transform: uppercase;
-  margin-bottom: 0;
 }
 
 .title-divider {
@@ -158,20 +150,37 @@ nav a:hover::after {
   margin: 26px auto 46px auto;
 }
 
-/* Sections */
-
 h2 {
   margin-top: 62px;
   margin-bottom: 12px;
   font-weight: normal;
   letter-spacing: 1.2px;
   color: #2d2d2d;
-  position: relative;
 }
 
 .section-intro {
   max-width: 850px;
   color: #3e3a35;
+}
+
+/* ABOUT */
+
+.about-layout {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.about-image img {
+  width: 280px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
+}
+
+.about-text {
+  max-width: 650px;
 }
 
 /* Collection */
@@ -186,7 +195,6 @@ h2 {
 .gem-link {
   text-decoration: none;
   color: inherit;
-  display: block;
 }
 
 .gem {
@@ -196,126 +204,15 @@ h2 {
   font-size: 15px;
   background: linear-gradient(145deg, #ffffff, #f1efeb);
   border: 1px solid #ddd7ce;
-  clip-path: polygon(
-    20% 0%,
-    80% 0%,
-    100% 20%,
-    100% 80%,
-    80% 100%,
-    20% 100%,
-    0% 80%,
-    0% 20%
-  );
-  box-shadow:
-    0 2px 5px rgba(0,0,0,0.05),
-    inset 0 1px 0 rgba(255,255,255,0.85);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  min-height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.gem-link:hover .gem {
-  transform: translateY(-4px);
-  border-color: var(--gold-soft);
-  box-shadow:
-    0 9px 18px rgba(0,0,0,0.08),
-    0 0 0 1px rgba(184,155,94,0.12),
-    inset 0 1px 0 rgba(255,255,255,0.95);
-}
-
-/* Gallery placeholder */
-
-.gallery-note {
-  color: #4b4741;
-}
-
-/* Credentials */
-
-.credentials-section {
-  margin-top: 78px;
-  padding-top: 38px;
-  border-top: 1px solid var(--line);
-}
-
-.badge-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 30px;
-  margin-top: 26px;
-}
-
-.badge-grid img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Footer */
-
-.footer {
-  margin-top: 78px;
-  padding-top: 30px;
-  border-top: 1px solid var(--line);
-  text-align: center;
-  font-size: 12px;
-  color: #777066;
-  letter-spacing: 1px;
-  position: relative;
-  overflow: hidden;
-}
-
-.footer::before {
-  content: "✦";
-  position: absolute;
-  left: 50%;
-  top: 18px;
-  transform: translateX(-50%);
-  font-size: 40px;
-  color: rgba(184, 155, 94, 0.12);
-  line-height: 1;
-  pointer-events: none;
-}
-
-.footer-inner {
-  position: relative;
-  z-index: 1;
-  padding-top: 18px;
 }
 
 /* Responsive */
 
 @media (max-width: 900px) {
-  .container {
-    padding: 36px 22px;
-  }
-
-  .site-title {
-    font-size: 2rem;
-  }
-
-  nav a {
-    margin: 0 10px;
-    font-size: 12px;
-  }
+  .container { padding: 36px 22px; }
+  .about-layout { flex-direction: column; text-align:center; }
 }
 
-@media (max-width: 600px) {
-  .site-title {
-    font-size: 1.7rem;
-    letter-spacing: 1.8px;
-  }
-
-  .header-subtitle,
-  .header-subtitle-2 {
-    letter-spacing: 1.2px;
-  }
-
-  .collection-grid {
-    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
-  }
-}
 </style>
 </head>
 
@@ -323,120 +220,68 @@ h2 {
 
 <div class="container">
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#collection">Collection</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#credentials">Credentials</a>
-  </nav>
+<nav>
+<a href="#about">About</a>
+<a href="#collection">Collection</a>
+<a href="#gallery">Gallery</a>
+<a href="#credentials">Credentials</a>
+</nav>
 
-  <div class="logo">
-    <img src="./logo.png" alt="David's Gems Logo">
-  </div>
+<div class="logo">
+<img src="./logo.png">
+</div>
 
-  <h1 class="site-title">David's Gemstone Collection</h1>
+<h1 class="site-title">David's Gemstone Collection</h1>
 
-  <div class="header-subtitle">
-    Private Collection &amp; Study Archive
-  </div>
+<div class="header-subtitle">
+Private Collection & Study Archive
+</div>
 
-  <div class="header-subtitle-2">
-    Inspired by the Crown Jewels &amp; British Royal Collections
-  </div>
+<div class="header-subtitle-2">
+Inspired by the Crown Jewels & British Royal Collections
+</div>
 
-  <div class="title-divider"></div>
+<div class="title-divider"></div>
 
 <h2 id="about">About</h2>
 
 <div class="about-layout">
 
-  <div class="about-image">
-    <img src="light-of-the-desert-reference.jpg" alt="Light of the Desert">
-  </div>
+<div class="about-image">
+<img src="light-of-the-desert-reference.jpg">
+</div>
 
-  <div class="about-text">
-    <p class="section-intro">
-      This independent gemological archive documents a private gemstone collection
-      assembled for study, reference, and appreciation. The collection is inspired by
-      historic royal jewel collections and museum-held specimens, with an emphasis on
-      gemological education, classification, and long-term documentation.
-    </p>
-  </div>
+<div class="about-text">
+<p class="section-intro">
+This independent gemological archive documents a private gemstone collection
+assembled for study, reference, and appreciation. The collection is inspired by
+historic royal jewel collections and museum-held specimens, with an emphasis on
+gemological education, classification, and long-term documentation.
+</p>
+</div>
 
 </div>
 
-  <h2 id="collection">Collection</h2>
+<h2 id="collection">Collection</h2>
 
-  <div class="collection-grid">
+<div class="collection-grid">
 
-    <a class="gem-link" href="amethyst.html"><div class="gem">Amethyst</div></a>
-    <a class="gem-link" href="ametrine.html"><div class="gem">Ametrine</div></a>
-    <a class="gem-link" href="aquamarine.html"><div class="gem">Aquamarine</div></a>
-    <a class="gem-link" href="citrine.html"><div class="gem">Citrine</div></a>
-    <a class="gem-link" href="garnet.html"><div class="gem">Garnet</div></a>
-    <a class="gem-link" href="kunzite.html"><div class="gem">Kunzite</div></a>
-    <a class="gem-link" href="opal.html"><div class="gem">Opal</div></a>
-    <a class="gem-link" href="prasiolite.html"><div class="gem">Prasiolite</div></a>
-    <a class="gem-link" href="quartz.html"><div class="gem">Quartz</div></a>
-    <a class="gem-link" href="sapphire.html"><div class="gem">Sapphire</div></a>
-    <a class="gem-link" href="spinel.html"><div class="gem">Spinel</div></a>
-    <a class="gem-link" href="topaz.html"><div class="gem">Topaz</div></a>
-    <a class="gem-link" href="tourmaline.html"><div class="gem">Tourmaline</div></a>
-    <a class="gem-link" href="zircon.html"><div class="gem">Zircon</div></a>
+<a class="gem-link" href="amethyst.html"><div class="gem">Amethyst</div></a>
+<a class="gem-link" href="ametrine.html"><div class="gem">Ametrine</div></a>
+<a class="gem-link" href="aquamarine.html"><div class="gem">Aquamarine</div></a>
+<a class="gem-link" href="citrine.html"><div class="gem">Citrine</div></a>
+<a class="gem-link" href="garnet.html"><div class="gem">Garnet</div></a>
+<a class="gem-link" href="kunzite.html"><div class="gem">Kunzite</div></a>
+<a class="gem-link" href="opal.html"><div class="gem">Opal</div></a>
+<a class="gem-link" href="prasiolite.html"><div class="gem">Prasiolite</div></a>
+<a class="gem-link" href="quartz.html"><div class="gem">Quartz</div></a>
+<a class="gem-link" href="sapphire.html"><div class="gem">Sapphire</div></a>
+<a class="gem-link" href="spinel.html"><div class="gem">Spinel</div></a>
+<a class="gem-link" href="topaz.html"><div class="gem">Topaz</div></a>
+<a class="gem-link" href="tourmaline.html"><div class="gem">Tourmaline</div></a>
+<a class="gem-link" href="zircon.html"><div class="gem">Zircon</div></a>
 
-  </div>
-
-  <h2 id="gallery">Gallery</h2>
-  <p class="gallery-note">
-    Specimen photography and catalogue entries will be added as documentation of the
-    collection progresses. Individual gemstone pages have been prepared for future
-    expansion.
-  </p>
-
-  <div class="credentials-section" id="credentials">
-
-    <h2>Credentials</h2>
-
-    <p class="section-intro">
-      International Gem Society coursework and certifications.
-      Professional Gemologist designation in progress.
-    </p>
-
-    <div class="badge-grid">
-      <img src="https://www.gemsociety.org/badge/28682/1/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/968874/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/968361/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/875625/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/680044/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/635770/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/603658/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/570026/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/549880/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/525304/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/511667/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/507153/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/504399/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/504417/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/504384/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/502495/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/501364/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/501365/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/501218/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/501071/" alt="IGS badge">
-      <img src="https://www.gemsociety.org/badge/28682/500216/" alt="IGS badge">
-    </div>
-
-  </div>
-
-  <div class="footer">
-    <div class="footer-inner">
-      David's Gemstone Collection
-      <br>
-      Independent Gemological Study Archive
-      <br><br>
-      © 2026
-    </div>
-  </div>
+</div>
 
 </div>
 
